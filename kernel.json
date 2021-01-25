@@ -1,0 +1,6 @@
+{
+ "argv": ["python3", "-m", "acl2_jupyter.acl2_kernel", "-f", "{connection_file}"],
+ "display_name": "ACL2",
+ "language": "acl2",
+ "codemirror_mode":"Common Lisp"
+}
