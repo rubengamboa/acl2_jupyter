@@ -37,8 +37,9 @@ class Acl2Kernel(Kernel):
     def bridge(self):
         if self._bridge is None:
             self._bridge = ACL2Bridge(log=self.log)
-            self.bridge.acl2_command(ACL2Command.LISP, "(set-slow-alist-action nil)")
             self.bridge.acl2_command(ACL2Command.LISP, ":ubu acl2-bridge-start")
+            self.bridge.acl2_command(ACL2Command.LISP, "(set-slow-alist-action nil)")
+            self.bridge.acl2_command(ACL2Command.LISP, "(assign slow-array-action nil)")
         return self._bridge
 
     def __init__(self, **kwargs):
